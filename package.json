@@ -1,0 +1,13 @@
+{
+  "name": "keyla-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portofolio Keyla Marcelianti — situs statis siap GitHub Pages",
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i ./src/input.css -o ./assets/css/styles.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i ./src/input.css -o ./assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

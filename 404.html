@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman tidak ditemukan — Keyla Marcelianti</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#101c37">
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: #fff8ef;
+      color: #1e1b14;
+      font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    main { max-width: 34rem; }
+    .label {
+      display: inline-block;
+      margin: 0 0 1rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      background: #fcc019;
+      color: #101c37;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 1rem;
+      font-family: "Bebas Neue", Impact, Haettenschweiler, sans-serif;
+      font-size: clamp(3rem, 12vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #101c37;
+    }
+    p { margin: 0 0 2rem; font-size: 1rem; line-height: 1.6; color: #45464d; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      border: 1.5px solid #101c37;
+      border-radius: 0.25rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #101c37;
+      background: transparent;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    a.primary { background: #101c37; color: #fff8ef; }
+    a:hover, a:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 4px 4px 0 #fcc019;
+      outline: none;
+    }
+    a.primary:hover, a.primary:focus-visible { box-shadow: 4px 4px 0 #785900; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="label">Error 404</p>
+    <h1>Halaman tidak ditemukan</h1>
+    <p>Tautan yang Anda buka mungkin sudah dipindahkan atau salah ketik. Silakan kembali ke halaman utama portofolio.</p>
+    <div class="actions">
+      <a class="primary" id="home-link" href="/">Kembali ke Beranda</a>
+      <a href="mailto:keylamarcelianti03@gmail.com">Laporkan Tautan Rusak</a>
+    </div>
+  </main>
+  <script>
+    (function () {
+      // GitHub Pages dapat menyajikan 404 ini dari kedalaman URL apa pun.
+      // Untuk project site (username.github.io/nama-repo/), segmen pertama adalah nama repo.
+      var segments = window.location.pathname.split('/').filter(Boolean);
+      var home = segments.length > 1 ? '/' + segments[0] + '/' : '/';
+      var link = document.getElementById('home-link');
+      if (link) link.setAttribute('href', home);
+    })();
+  </script>
+</body>
+</html>
